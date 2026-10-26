@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Colour and font tokens. Use them in classes like bg-marker, text-ink, font-display. */
+@theme {
+  --color-marker: #ffd23f;   /* highlighter yellow */
+  --color-butter: #fff1b8;   /* soft yellow for panels */
+  --color-flame: #ff7a00;    /* orange for buttons and accents */
+  --color-ember: #c2410c;    /* dark orange, readable as text on white */
+  --color-ink: #2a1a0a;      /* deep brown for text */
+  --color-paper: #fffdf7;    /* page background */
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* The highlighter-pen effect used for key words. */
+.marker {
+  background: linear-gradient(transparent 55%, var(--color-marker) 55%);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 2px;
+}
